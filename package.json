@@ -1,0 +1,36 @@
+{
+  "name": "jb-national-input",
+  "description": "national input web component",
+  "type": "module",
+  "author": {
+		"name": "mohammad javad bathaei",
+		"email": "javadbat@gmail.com"
+	},
+  "keywords": [
+    "jb",
+    "jb-national-input",
+    "iran",
+    "meli code",
+    "code meli",
+    "کد ملی",
+    "national code input",
+    "web component"
+  ],
+  "version": "1.0.0",
+  "bugs": "https://github.com/javadbat/jb-national-input/issues",
+  "license": "MIT",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "lib/",
+    "dist/"
+  ],
+  "main": "index.js",
+  "repository": {
+		"type": "git",
+		"url": "git@github.com:javadbat/jb-national-input.git"
+  },
+  "dependencies": {
+    "jb-input": ">=2.4.1"
+  }
+}
