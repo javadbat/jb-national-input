@@ -9,7 +9,6 @@ import { faToEnDigits } from "../../../common/scripts/persian-helper";
 //TODO: add barcode scanner or nfc reader
 export class JBNationalInputWebComponent extends JBInputWebComponent implements WithValidation<ValidationValue>{
 
-  inputType: "CARD" | "SHABA";
   constructor() {
     super();
     //to prevent initWebComponent  method override
