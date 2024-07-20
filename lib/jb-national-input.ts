@@ -36,7 +36,7 @@ export class JBNationalInputWebComponent extends JBInputWebComponent implements 
     } else {
       displayValue = '';
     }
-    //convert perian number to en number
+    //convert persian number to en number
     value = faToEnDigits(displayValue);
     return { value, displayValue };
   }
