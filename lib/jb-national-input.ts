@@ -4,7 +4,7 @@ import "jb-input";
 import { JBInputWebComponent} from "jb-input";
 import { JBInputValue, ValidationValue} from "jb-input/types";
 //TODO: update it when you move validation to core package
-import { WithValidation, ValidationItem } from "jb-input/types/validation";
+import { WithValidation, ValidationItem } from "jb-validation/types";
 import { faToEnDigits } from "../../../common/scripts/persian-helper";
 //TODO: add barcode scanner or nfc reader
 export class JBNationalInputWebComponent extends JBInputWebComponent implements WithValidation<ValidationValue>{
