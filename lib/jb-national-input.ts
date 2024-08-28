@@ -2,11 +2,11 @@ import CSS from "./jb-national-input.scss";
 import "jb-input";
 // eslint-disable-next-line no-duplicate-imports
 import { JBInputWebComponent} from "jb-input";
-import { JBInputValue, ValidationValue} from "jb-input/types";
-//TODO: update it when you move validation to core package
-import { WithValidation, ValidationItem } from "jb-validation/types";
+import { type JBInputValue, type ValidationValue} from "jb-input/types";
+import { type WithValidation, type ValidationItem } from "jb-validation/types";
 import { faToEnDigits } from "../../../common/scripts/persian-helper";
 //TODO: add barcode scanner or nfc reader
+//TODO: add showPersianNumber
 export class JBNationalInputWebComponent extends JBInputWebComponent implements WithValidation<ValidationValue>{
 
   constructor() {
