@@ -7,7 +7,7 @@ import { type WithValidation, type ValidationItem } from "jb-validation/types";
 import { faToEnDigits } from "../../../common/scripts/persian-helper";
 //TODO: add barcode scanner or nfc reader
 //TODO: add showPersianNumber
-export class JBNationalInputWebComponent extends JBInputWebComponent implements WithValidation<ValidationValue>{
+export class JBNationalInputWebComponent extends JBInputWebComponent{
 
   constructor() {
     super();
