@@ -1,9 +1,8 @@
 import CSS from "./jb-national-input.scss";
 import "jb-input";
 // eslint-disable-next-line no-duplicate-imports
-import { JBInputWebComponent} from "jb-input";
-import { type JBInputValue} from "jb-input/types";
-import { type ValidationItem } from "jb-validation/types.js";
+import { JBInputWebComponent,type JBInputValue} from "jb-input";
+import { type ValidationItem } from "jb-validation";
 import { faToEnDigits } from "../../../common/scripts/persian-helper";
 //TODO: add barcode scanner or nfc reader
 //TODO: add showPersianNumber
