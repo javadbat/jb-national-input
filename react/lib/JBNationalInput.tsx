@@ -1,10 +1,10 @@
 import React, { useRef, useEffect, useState, useImperativeHandle } from 'react';
 import 'jb-national-input';
 // eslint-disable-next-line no-duplicate-imports
-import {type JBNationalInputWebComponent} from 'jb-national-input';
-import { type Props as JBInputProps,useJBInputEvents,useJBInputAttribute } from 'jb-input/react';
+import {JBNationalInputWebComponent} from 'jb-national-input';
+import {useJBInputEvents,useJBInputAttribute, BaseProps } from 'jb-input/react';
 
-export type Props = JBInputProps
+export type Props = BaseProps<JBNationalInputWebComponent>
 interface JBNationalInputType extends React.DetailedHTMLProps<React.HTMLAttributes<JBNationalInputWebComponent>, JBNationalInputWebComponent> {
   "class"?: string,
   "type"?: string,
@@ -33,7 +33,7 @@ const JBNationalInput = React.forwardRef((props:Props, ref) => {
     refChangeCountSetter(refChangeCount + 1);
   }, [element.current]);
   useJBInputAttribute(element,props);
-  useJBInputEvents(element,props);
+  useJBInputEvents<JBNationalInputWebComponent>(element,props);
   return (
     <jb-national-input ref={element} class={props.className?props.className:''}>
     </jb-national-input>

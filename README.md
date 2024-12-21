@@ -5,6 +5,10 @@ superset component on [jb-input](https://github.com/javadbat/jb-input) , just fo
 
 Demo in Codepen: [jb-national-input](https://codepen.io/javadbat/pen/PorNxOw)  
 
+## using with JS frameworks
+
+to use this component in **react** see [`jb-national-input/react`](https://github.com/javadbat/jb-national-input/tree/main/react);
+
 ## Installation
 ```bash
 npm install --save jb-national-input
@@ -27,7 +31,7 @@ all styles come from jb-input except `--jb-national-input-input-direction` this 
 
 ## Other Related Docs:
 
-- see [jb-national-input-react](https://github.com/javadbat/jb-national-input-react) if you want to use this component as a react component.
+- see [`jb-national-input/react`](https://github.com/javadbat/jb-national-input/tree/main/react) if you want to use this component as a react component.
 
 - see [All JB Design system Component List](https://github.com/javadbat/design-system/blob/master/docs/component-list.md) for more components
 

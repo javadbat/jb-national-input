@@ -17,14 +17,16 @@
     "national code input",
     "web component"
   ],
-  "version": "2.0.3",
+  "version": "2.1.0",
   "bugs": "https://github.com/javadbat/jb-national-input/issues",
   "license": "MIT",
   "files": [
     "LICENSE",
     "README.md",
     "lib/",
-    "dist/"
+    "dist/",
+    "react/",
+    "react/dist/"
   ],
   "main": "index.js",
   "repository": {
@@ -33,7 +35,7 @@
   },
   "types": "./dist/web-component/jb-national-input/lib/jb-national-input.d.ts",
   "dependencies": {
-    "jb-input": ">=3.0.0",
-    "jb-validation":">=0.0.2"
+    "jb-input": ">=3.5.0",
+    "jb-validation":">=0.2.0"
   }
 }
