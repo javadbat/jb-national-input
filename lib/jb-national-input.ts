@@ -4,6 +4,7 @@ import "jb-input";
 import { JBInputWebComponent,type JBInputValue} from "jb-input";
 import { type ValidationItem } from "jb-validation";
 import { faToEnDigits } from "../../../common/scripts/persian-helper";
+export * from "./types";
 //TODO: add barcode scanner or nfc reader
 //TODO: add showPersianNumber
 export class JBNationalInputWebComponent extends JBInputWebComponent{
