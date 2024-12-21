@@ -1,0 +1,39 @@
+{
+  "name": "jb-national-input-react",
+  "description": "iran national id input react component",
+  "type": "module",
+  "author": {
+		"name": "mohammad javad bathaei",
+		"email": "javadbat@gmail.com"
+	},
+  "keywords": [
+    "jb",
+    "jb-national-input",
+    "jb-national-input-react",
+    "iran",
+    "meli code",
+    "code meli",
+    "کد ملی",
+    "national code input",
+    "web component"
+  ],
+  "version": "1.0.3",
+  "bugs": "https://github.com/javadbat/jb-national-input-react/issues",
+  "license": "MIT",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "lib/",
+    "dist/"
+  ],
+  "main": "index.js",
+  "repository": {
+		"type": "git",
+		"url": "git@github.com:javadbat/jb-national-input-react.git"
+  },
+  "types": "./dist/react-component/jb-national-input/lib/JBNationalInput.d.ts",
+  "dependencies": {
+    "jb-national-input": ">=2.0.3",
+    "jb-input-react":">=3.2.0"
+  }
+}
