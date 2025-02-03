@@ -24,5 +24,7 @@ export const reactComponentList: ReactComponentBuildConfig[] = [
       "jb-input-react": "JBInputReact",
       "jb-national-input": "JBNationalInput"
     },
+    umdName: "JBNationalInputReact",
+    dir: "./react"
   },
 ];
