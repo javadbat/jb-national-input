@@ -3,7 +3,7 @@ import "jb-input";
 // eslint-disable-next-line no-duplicate-imports
 import { JBInputWebComponent,type JBInputValue} from "jb-input";
 import { type ValidationItem } from "jb-validation";
-import { faToEnDigits } from "../../../common/scripts/persian-helper";
+import { faToEnDigits } from "jb-core";
 export * from "./types";
 //TODO: add barcode scanner or nfc reader
 //TODO: add showPersianNumber
