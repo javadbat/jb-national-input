@@ -21,6 +21,7 @@ export const reactComponentList: ReactComponentBuildConfig[] = [
     external: ["jb-national-input", "jb-input-react", "jb-input", "prop-types", "react"],
     globals: {
       "react": "React",
+      "jb-input": "JBInput",
       "jb-input-react": "JBInputReact",
       "jb-national-input": "JBNationalInput"
     },
