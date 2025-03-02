@@ -31,7 +31,7 @@
 		"type": "git",
 		"url": "git@github.com:javadbat/jb-national-input-react.git"
   },
-  "types": "./dist/web-component/jb-national-input/react/lib/JBNationalInput.d.ts",
+  "types": "./dist/react/lib/JBNationalInput.d.ts",
   "dependencies": {
     "jb-national-input": ">=2.1.0",
     "jb-input":">=3.5.0"
