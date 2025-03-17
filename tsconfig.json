@@ -1,7 +1,8 @@
 {
     "compilerOptions": {
         "baseUrl": ".",
-        "rootDir": "./lib"
+        "rootDir": "./lib",
+        "declarationDir": "./dist"
     },
     "include": [
         "../global.d.ts",
@@ -9,7 +10,7 @@
     ],
     "exclude": [
         "node_modules",
-        "stories",
+        "**/stories",
         "**/*.spec.ts",
         "dist",
     ],
