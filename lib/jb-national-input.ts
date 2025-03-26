@@ -52,6 +52,7 @@ export class JBNationalInputWebComponent extends JBInputWebComponent{
   }
   #getNationalIdValidations():ValidationItem<JBInputValue>[]{
     function isValidIranianNationalCode(rawNationalCodeString:string){
+      if(rawNationalCodeString.length === 0) return true;
       //check if input is valid iranian national code
       const nationalCode = faToEnDigits(rawNationalCodeString);
       if (!/^\d{10}$/.test(nationalCode)) return false;
