@@ -35,7 +35,7 @@
   },
   "types": "./dist/jb-national-input.d.ts",
   "dependencies": {
-    "jb-input": ">=3.8.0",
+    "jb-input": ">=3.11.0",
     "jb-validation":">=0.4.0",
     "jb-core":">=0.4.0"
   }
