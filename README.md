@@ -10,17 +10,17 @@ Demo in Codepen: [jb-national-input](https://codepen.io/javadbat/pen/PorNxOw)
 to use this component in **react** see [`jb-national-input/react`](https://github.com/javadbat/jb-national-input/tree/main/react);
 
 ## Installation
-```bash
+
+```sh
 npm install --save jb-national-input
 ```
 
 ## Usage
 
 ```js
-
 import 'jb-national-input';
-
 ```
+
 ```html
 <jb-national-input></jb-national-input>
 ```
