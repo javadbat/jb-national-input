@@ -1,4 +1,4 @@
-import CSS from "./jb-national-input.scss";
+import CSS from "./jb-national-input.css";
 import "jb-input";
 // eslint-disable-next-line no-duplicate-imports
 import { JBInputWebComponent,type JBInputValue} from "jb-input";
