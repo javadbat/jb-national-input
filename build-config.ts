@@ -6,10 +6,13 @@ export const webComponentList: WebComponentBuildConfig[] = [
     path: "./lib/jb-national-input.ts",
     outputPath: "./dist/jb-national-input.js",
     umdName: "JBNationalInput",
-    external: ["jb-input", "jb-validation"],
+    external: ["jb-input", "jb-validation","jb-core", "jb-core/i18n", "jb-core/i18n"],
     globals: {
       "jb-input": "JBInput",
-      "jb-validation": "JBValidation"
+      "jb-validation": "JBValidation",
+      "jb-core": "JBCore",
+      "jb-core/i18n": "JBCoreI18N",
+      "jb-core/theme": "JBCoreTheme"
     },
   },
 ];

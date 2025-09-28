@@ -4,6 +4,8 @@ import "jb-input";
 import { JBInputWebComponent,type JBInputValue} from "jb-input";
 import { type ValidationItem } from "jb-validation";
 import { faToEnDigits } from "jb-core";
+import { dictionary } from "./i18n";
+import { i18n } from "jb-core/i18n";
 export * from "./types";
 //TODO: add barcode scanner or nfc reader
 //TODO: add showPersianNumber
@@ -63,7 +65,8 @@ export class JBNationalInputWebComponent extends JBInputWebComponent{
     }
     const nationalCodeValidation:ValidationItem<JBInputValue> = {
       validator:({value}) => isValidIranianNationalCode(value),
-      message:'کد ملی وارد شده نامعتبر است'
+      message:dictionary.get(i18n,"invalidValue"),
+      stateType:"badInput"
     };
     return [nationalCodeValidation];
   }

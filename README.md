@@ -1,9 +1,13 @@
 # jb-national-input
+
 jb national id input(کد ملی) with proper validation
 superset component on [jb-input](https://github.com/javadbat/jb-input) , just for national id number with extra filter and ready to use validator
 کامپوننت ورود کد ملی    
 
-Demo in Codepen: [jb-national-input](https://codepen.io/javadbat/pen/PorNxOw)  
+## Demo
+
+- [Codepen](https://codepen.io/javadbat/pen/PorNxOw)
+- [Storybook](https://javadbat.github.io/design-system/?path=/story/components-form-elements-inputs-jbnationalinput)
 
 ## using with JS frameworks
 
