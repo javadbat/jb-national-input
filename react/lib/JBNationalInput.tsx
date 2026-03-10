@@ -1,9 +1,9 @@
 'use client';
-import React, { useRef, useEffect, useState, useImperativeHandle } from 'react';
+import React, { useRef, useImperativeHandle } from 'react';
 import 'jb-national-input';
 // eslint-disable-next-line no-duplicate-imports
-import { JBNationalInputWebComponent } from 'jb-national-input';
-import { useJBInputEvents, useJBInputAttribute, BaseProps } from 'jb-input/react';
+import type { JBNationalInputWebComponent } from 'jb-national-input';
+import { useJBInputEvents, useJBInputAttribute, type BaseProps } from 'jb-input/react';
 
 export type Props = BaseProps<JBNationalInputWebComponent>
 interface JBNationalInputType extends React.DetailedHTMLProps<React.HTMLAttributes<JBNationalInputWebComponent>, JBNationalInputWebComponent> {
@@ -24,22 +24,17 @@ declare module "react" {
 // eslint-disable-next-line react/display-name
 const JBNationalInput = React.forwardRef((props: Props, ref) => {
   const element = useRef<JBNationalInputWebComponent>(null);
-  const [refChangeCount, refChangeCountSetter] = useState(0);
   useImperativeHandle(
     ref,
     () => (element ? element.current : {}),
     [element],
   );
-  useEffect(() => {
-    refChangeCountSetter(refChangeCount + 1);
-  }, [element.current]);
-  useJBInputAttribute(element, props);
-  useJBInputEvents<JBNationalInputWebComponent>(element, props);
+  const {disabled,required,validationList,value,children,onBeforeinput,onBlur,onChange,onEnter,onFocus,onInput,onKeydown,onKeyup , ...otherProps} = props;
+  useJBInputAttribute(element, {disabled,required,validationList,value,...otherProps});
+  useJBInputEvents<JBNationalInputWebComponent>(element, {onBeforeinput,onBlur,onChange,onEnter,onFocus,onInput,onKeydown,onKeyup,...otherProps});
   return (
-    <jb-national-input ref={element} class={props.className ? props.className : ''}>
-      {
-        props.children
-      }
+    <jb-national-input ref={element} {...otherProps}>
+      {children}
     </jb-national-input>
   );
 });
