@@ -1,5 +1,10 @@
 # jb-national-input
 
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/jb-national-input)
+[![GitHub license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://raw.githubusercontent.com/javadbat/jb-national-input/main/LICENSE)
+[![NPM Version](https://img.shields.io/npm/v/jb-national-input)](https://www.npmjs.com/package/jb-national-input)
+![GitHub Created At](https://img.shields.io/github/created-at/javadbat/jb-national-input)
+
 jb national id input(کد ملی) with proper validation
 superset component on [jb-input](https://github.com/javadbat/jb-input) , just for national id number with extra filter and ready to use validator
 کامپوننت ورود کد ملی    
