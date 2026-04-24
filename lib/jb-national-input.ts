@@ -2,7 +2,7 @@ import CSS from "./jb-national-input.css";
 import "jb-input";
 // eslint-disable-next-line no-duplicate-imports
 import { JBInputWebComponent,type JBInputValue} from "jb-input";
-import { type ValidationItem } from "jb-validation";
+import type { ValidationItem } from "jb-validation";
 import { faToEnDigits } from "jb-core";
 import { dictionary } from "./i18n";
 import { i18n } from "jb-core/i18n";
@@ -20,7 +20,7 @@ export class JBNationalInputWebComponent extends JBInputWebComponent{
     const html = `<style>${CSS}</style>`;
     const element = document.createElement("template");
     element.innerHTML = html;
-    this.shadowRoot.appendChild(element.content.cloneNode(true));
+    this.shadowRoot!.appendChild(element.content.cloneNode(true));
     this.validation.addValidationListGetter(this.#getNationalIdValidations.bind(this));
     this.#addNationalInputEventListeners();
     this.addStandardValueCallback(this.#standardNationalIdValue.bind(this));
@@ -33,7 +33,7 @@ export class JBNationalInputWebComponent extends JBInputWebComponent{
     let value = '';
     // truncate value to 10 digits
     const res = /(?<nationalId>[\u06F0-\u06F90-9]{1,10})/g.exec(valueString);
-    if (res && res.groups) {
+    if (res?.groups) {
       displayValue = res.groups.nationalId;
     } else {
       displayValue = '';
@@ -47,7 +47,7 @@ export class JBNationalInputWebComponent extends JBInputWebComponent{
   }
   #onNationalInputBeforeInput(e:InputEvent) {
     const inputtedText = e.data;
-    const testRes = /[\u06F0-\u06F90-9]{1,10}/g.test(inputtedText);
+    const testRes = /[\u06F0-\u06F90-9]{1,10}/g.test(inputtedText??"");
     if (!testRes && e.inputType != 'deleteContentBackward') {
       e.preventDefault();
     }
