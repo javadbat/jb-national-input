@@ -12,8 +12,7 @@ superset component on [jb-input-react](https://github.com/javadbat/jb-input-reac
 
 
 Demo: [codeSandbox preview](https://3f63dj.csb.app/samples/jb-national-input) for just see the demo and [codeSandbox editor](https://codesandbox.io/p/sandbox/jb-design-system-3f63dj?file=%2Fsrc%2Fsamples%2FJBNationalInput.tsx) if you want to see and play with code
-## usage
-
+## Usage
 ```jsx
 import {JBNationalInput} from 'jb-national-input/react';
 
@@ -21,8 +20,12 @@ import {JBNationalInput} from 'jb-national-input/react';
 ```
 for more information and more detail please read [jb-input/react](https://github.com/javadbat/jb-input/tree/main/react) doc. all feature of jb-input is also available here.
 
-## Other Related Docs:
 
+## Shared Documentation
+
+For web-component behavior, events, slots, and CSS variables, see [`jb-national-input`](https://github.com/javadbat/jb-national-input).
+
+## Related Docs
 - see [jb-national-input](https://github.com/javadbat/jb-national-input) if you want to use this component as a web-component.
 
 - see [All JB Design system Component List](https://javadbat.github.io/design-system/) for more components

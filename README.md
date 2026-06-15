@@ -14,18 +14,15 @@ superset component on [jb-input](https://github.com/javadbat/jb-input) , just fo
 - [Codepen](https://codepen.io/javadbat/pen/PorNxOw)
 - [Storybook](https://javadbat.github.io/design-system/?path=/story/components-form-elements-inputs-jbnationalinput)
 
-## using with JS frameworks
-
+## Using With JS Frameworks
 - [<img src="https://img.shields.io/badge/React.js-jb--national--input%2Freact-000.svg?logo=react&logoColor=%2361DAFB" height="30" />](https://github.com/javadbat/jb-national-input/tree/main/react)
 
 ## Installation
-
 ```sh
 npm install --save jb-national-input
 ```
 
 ## Usage
-
 ```js
 import 'jb-national-input';
 ```
@@ -35,11 +32,15 @@ import 'jb-national-input';
 ```
 to learn more information about this component and how to customize it like events, styling,... just read [jb-input](https://github.com/javadbat/jb-input)
 
-## styling
+## Styling
 all styles come from jb-input except `--jb-national-input-input-direction` this may be set if you want your input to be rtl (not recommended).
 
-## Other Related Docs:
+## CSS Variables
+| CSS variable name | description |
+| --- | --- |
+| --jb-national-input-input-direction | Customize input direction. |
 
+## Related Docs
 - see [`jb-national-input/react`](https://github.com/javadbat/jb-national-input/tree/main/react) if you want to use this component as a react component.
 
 - see [All JB Design system Component List](https://javadbat.github.io/design-system/) for more components
