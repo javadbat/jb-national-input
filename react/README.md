@@ -1,5 +1,10 @@
 # jb-national-input-react
 
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/jb-national-input)
+[![GitHub license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://raw.githubusercontent.com/javadbat/jb-national-input/main/LICENSE)
+[![NPM Version](https://img.shields.io/npm/v/jb-national-input-react)](https://www.npmjs.com/package/jb-national-input-react)
+![GitHub Created At](https://img.shields.io/github/created-at/javadbat/jb-national-input)
+
 react component wrapper for [jb-national-input](https://github.com/javadbat/jb-national-input)
 superset component on [jb-input-react](https://github.com/javadbat/jb-input-react) , just for national number input with extra filter and ready to use validator.
 
