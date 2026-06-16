@@ -5,29 +5,90 @@
 [![NPM Version](https://img.shields.io/npm/v/jb-national-input-react)](https://www.npmjs.com/package/jb-national-input-react)
 ![GitHub Created At](https://img.shields.io/github/created-at/javadbat/jb-national-input)
 
-react component wrapper for [jb-national-input](https://github.com/javadbat/jb-national-input)
-superset component on [jb-input-react](https://github.com/javadbat/jb-input-react) , just for national number input with extra filter and ready to use validator.
+React wrapper for [`jb-national-input`](https://github.com/javadbat/jb-national-input), an Iranian national code input built on [`jb-input/react`](https://github.com/javadbat/jb-input/tree/main/react).
 
-کامپوننت ورود کد ملی برای ریاکت (ReactJS)
+## Demo
 
+- [CodeSandbox preview](https://3f63dj.csb.app/samples/jb-national-input)
+- [CodeSandbox editor](https://codesandbox.io/p/sandbox/jb-design-system-3f63dj?file=%2Fsrc%2Fsamples%2FJBNationalInput.tsx)
 
-Demo: [codeSandbox preview](https://3f63dj.csb.app/samples/jb-national-input) for just see the demo and [codeSandbox editor](https://codesandbox.io/p/sandbox/jb-design-system-3f63dj?file=%2Fsrc%2Fsamples%2FJBNationalInput.tsx) if you want to see and play with code
-## Usage
-```jsx
-import {JBNationalInput} from 'jb-national-input/react';
+## Installation
 
-<JBNationalInput></JBNationalInput>
+```sh
+npm install --save jb-national-input
 ```
-for more information and more detail please read [jb-input/react](https://github.com/javadbat/jb-input/tree/main/react) doc. all feature of jb-input is also available here.
 
+```jsx
+import { JBNationalInput } from 'jb-national-input/react';
+
+<JBNationalInput label="National code" />;
+```
+
+## When to use
+
+Use `JBNationalInput` when a React form must collect an Iranian national code with built-in digit filtering and checksum validation.
+
+Use `JBInput` from `jb-input/react` for generic text fields.
+
+## API
+
+`JBNationalInput` uses the inherited React props and events from `jb-input/react`. For the full inherited API, see [`jb-input/react`](https://github.com/javadbat/jb-input/tree/main/react).
+
+## Value format
+
+Read `event.target.value` for normalized English-digit data.
+
+```jsx
+const [nationalCode, setNationalCode] = useState('');
+
+<JBNationalInput
+  value={nationalCode}
+  label="National code"
+  onInput={(event) => setNationalCode(event.target.value)}
+/>;
+```
+
+## Validation
+
+The underlying web component adds Iranian national-code checksum validation to inherited `jb-input` validation.
+
+```jsx
+<JBNationalInput required="National code is required" />
+```
+
+Use a ref for imperative validation:
+
+```jsx
+const nationalInputRef = useRef(null);
+
+<JBNationalInput ref={nationalInputRef} required />;
+
+const isValid = nationalInputRef.current?.reportValidity();
+```
+
+## Styling
+
+All styling is inherited from `jb-input` except this variable:
+
+| CSS variable name | description |
+| --- | --- |
+| `--jb-national-input-input-direction` | Direction of the inner input text. Default is `ltr`. |
 
 ## Shared Documentation
 
-For web-component behavior, events, slots, and CSS variables, see [`jb-national-input`](https://github.com/javadbat/jb-national-input).
+For web-component national-code behavior, see [`jb-national-input`](https://github.com/javadbat/jb-national-input).
+
+For inherited input props, events, validation, slots, and styling, see [`jb-input/react`](https://github.com/javadbat/jb-input/tree/main/react).
 
 ## Related Docs
-- see [jb-national-input](https://github.com/javadbat/jb-national-input) if you want to use this component as a web-component.
 
-- see [All JB Design system Component List](https://javadbat.github.io/design-system/) for more components
+- See [All JB Design System Component List](https://javadbat.github.io/design-system/) for more components.
+- Use [Contribution Guide](https://github.com/javadbat/design-system/blob/main/docs/contribution-guide.md) if you want to contribute to this component.
 
-- use [Contribution Guide](https://github.com/javadbat/design-system/blob/main/docs/contribution-guide.md) if you want to contribute in this component.
+## AI agent notes
+
+- Import `JBNationalInput` from `jb-national-input/react`; the wrapper imports and registers the underlying `jb-national-input` web component.
+- Use this component for Iranian national codes; use `JBInput` for generic text.
+- Do not duplicate the inherited `jb-input/react` API in generated docs; link to [`jb-input/react`](https://github.com/javadbat/jb-input/tree/main/react).
+- Read `event.target.value` for normalized English-digit data.
+- Do not add custom national-code checksum validation; the component already includes it.

@@ -1,0 +1,221 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "README.md",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "lib/jb-national-input.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "Iranian national code input web component built on jb-input. It accepts Persian and English digits, truncates to 10 digits, normalizes value to English digits, and adds Iranian national-code checksum validation.",
+          "name": "JBNationalInputWebComponent",
+          "tagName": "jb-national-input",
+          "customElement": true,
+          "superclass": {
+            "name": "JBInputWebComponent",
+            "module": "jb-input"
+          },
+          "attributes": [
+            {
+              "name": "value",
+              "description": "Initial or reflected national code value inherited from jb-input. Prefer the value property for controlled updates.",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "name": "label",
+              "description": "Visible label text and accessible aria label inherited from jb-input.",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "name": "message",
+              "description": "Helper text inherited from jb-input.",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "name": "name",
+              "description": "Form field name inherited from jb-input.",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "name": "placeholder",
+              "description": "Placeholder text inherited from jb-input.",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "name": "disabled",
+              "description": "Disables the input.",
+              "type": {
+                "text": "boolean"
+              }
+            },
+            {
+              "name": "required",
+              "description": "Enables required validation. A string value is used as the required validation message.",
+              "type": {
+                "text": "boolean | string"
+              }
+            },
+            {
+              "name": "error",
+              "description": "External validation error message inherited from jb-input.",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "name": "disable-auto-validation",
+              "description": "Stops automatic validation inherited from jb-input.",
+              "type": {
+                "text": "boolean"
+              }
+            },
+            {
+              "name": "size",
+              "description": "Visual size variant inherited from jb-input.",
+              "type": {
+                "text": "'xs' | 'sm' | 'md' | 'lg' | 'xl'"
+              }
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "description": "Canonical normalized national code value in English digits, up to 10 digits.",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "description": "Value rendered in the input after digit filtering. Persian digits may remain in displayValue.",
+              "type": {
+                "text": "string"
+              },
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "validation",
+              "description": "jb-validation helper inherited from jb-input with an added Iranian national-code checksum validation.",
+              "type": {
+                "text": "ValidationHelper"
+              },
+              "readonly": true
+            }
+          ],
+          "methods": [
+            {
+              "name": "checkValidity",
+              "description": "Inherited from jb-input. Runs validation without showing the error message.",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                }
+              }
+            },
+            {
+              "name": "reportValidity",
+              "description": "Inherited from jb-input. Runs validation and shows the first error message.",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                }
+              }
+            },
+            {
+              "name": "focus",
+              "description": "Inherited from jb-input. Focuses the inner native input."
+            }
+          ],
+          "events": [
+            {
+              "name": "input",
+              "description": "Inherited from jb-input. Dispatched on each user input after value standardization."
+            },
+            {
+              "name": "change",
+              "description": "Inherited from jb-input. Dispatched when the value is committed."
+            },
+            {
+              "name": "beforeinput",
+              "description": "Inherited from jb-input. Cancelable event dispatched before the native input changes."
+            },
+            {
+              "name": "enter",
+              "description": "Inherited from jb-input. Dispatched when Enter is pressed."
+            },
+            {
+              "name": "invalid",
+              "description": "Inherited from jb-input. Dispatched when validation finds an invalid value."
+            }
+          ],
+          "slots": [
+            {
+              "name": "start-section",
+              "description": "Inherited jb-input slot rendered before the native input."
+            },
+            {
+              "name": "end-section",
+              "description": "Inherited jb-input slot rendered after the native input."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "label",
+              "description": "Inherited from jb-input."
+            },
+            {
+              "name": "input-box",
+              "description": "Inherited from jb-input."
+            },
+            {
+              "name": "input",
+              "description": "Inherited from jb-input."
+            },
+            {
+              "name": "message",
+              "description": "Inherited from jb-input."
+            }
+          ],
+          "cssProperties": [
+            {
+              "name": "--jb-national-input-input-direction",
+              "description": "Direction of the inner input text. Default is ltr."
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "JBNationalInputWebComponent",
+          "declaration": {
+            "name": "JBNationalInputWebComponent",
+            "module": "lib/jb-national-input.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "jb-national-input",
+          "declaration": {
+            "name": "JBNationalInputWebComponent",
+            "module": "lib/jb-national-input.ts"
+          }
+        }
+      ]
+    }
+  ]
+}
