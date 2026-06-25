@@ -26,11 +26,11 @@ const JBNationalInput = React.forwardRef((props: Props, ref) => {
   const element = useRef<JBNationalInputWebComponent>(null);
   useImperativeHandle(
     ref,
-    () => (element ? element.current : {}),
+    () => element.current ?? undefined,
     [element],
   );
   const {disabled,required,validationList,value,children,onBeforeinput,onBlur,onChange,onEnter,onFocus,onInput,onKeydown,onKeyup , ...otherProps} = props;
-  useJBInputAttribute(element, {disabled,required,validationList,value,...otherProps});
+  useJBInputAttribute<JBNationalInputWebComponent>(element, {disabled,required,validationList,value,...otherProps});
   useJBInputEvents<JBNationalInputWebComponent>(element, {onBeforeinput,onBlur,onChange,onEnter,onFocus,onInput,onKeydown,onKeyup,...otherProps});
   return (
     <jb-national-input ref={element} {...otherProps}>
