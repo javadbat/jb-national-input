@@ -1,12 +1,12 @@
-import { JBNationalInput, Props } from 'jb-national-input/react';
+import { JBNationalInput } from 'jb-national-input/react';
 import type { Meta, StoryObj } from '@storybook/react';
 
-const meta: Meta<Props> = {
+const meta = {
   title: "Components/form elements/Inputs/JBNationalInput",
   component: JBNationalInput,
-};
+} satisfies Meta<typeof JBNationalInput>;
 export default meta;
-type Story = StoryObj<typeof JBNationalInput>;
+type Story = StoryObj<typeof meta>;
 
 export const Normal: Story = {
   args: {
