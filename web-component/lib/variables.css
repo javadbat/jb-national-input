@@ -1,0 +1,4 @@
+:host {
+  /* Other */
+  --input-direction: var(--jb-national-input-input-direction, ltr);
+}
