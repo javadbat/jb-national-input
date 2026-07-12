@@ -6,6 +6,8 @@ interface JBNationalInputType extends React.DetailedHTMLProps<React.HTMLAttribut
   "label"?: string,
   "message"?: string,
   "placeholder"?: string,
+  "value"?: string,
+  "initialValue"?: string,
 }
 
 declare module "react" {

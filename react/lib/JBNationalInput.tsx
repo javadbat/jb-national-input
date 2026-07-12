@@ -6,7 +6,7 @@ import type { JBNationalInputWebComponent } from 'jb-national-input';
 import { useJBInputEvents, useJBInputAttribute, type BaseProps } from 'jb-input/react';
 import './module-declaration.js';
 
-export type Props = BaseProps<JBNationalInputWebComponent>
+export type Props = BaseProps<JBNationalInputWebComponent> & { initialValue?: string | number | null }
 // eslint-disable-next-line react/display-name
 const JBNationalInput = React.forwardRef((props: Props, ref) => {
   const element = useRef<JBNationalInputWebComponent>(null);
@@ -15,11 +15,11 @@ const JBNationalInput = React.forwardRef((props: Props, ref) => {
     () => element.current ?? undefined,
     [element],
   );
-  const {disabled,required,validationList,value,children,onBeforeinput,onBlur,onChange,onEnter,onFocus,onInput,onKeydown,onKeyup , ...otherProps} = props;
-  useJBInputAttribute<JBNationalInputWebComponent>(element, {disabled,required,validationList,value,...otherProps});
+  const {disabled,initialValue,required,validationList,value,children,onBeforeinput,onBlur,onChange,onEnter,onFocus,onInput,onKeydown,onKeyup , ...otherProps} = props;
+  useJBInputAttribute<JBNationalInputWebComponent>(element, {disabled,required,validationList,...otherProps});
   useJBInputEvents<JBNationalInputWebComponent>(element, {onBeforeinput,onBlur,onChange,onEnter,onFocus,onInput,onKeydown,onKeyup,...otherProps});
   return (
-    <jb-national-input ref={element} {...otherProps}>
+    <jb-national-input ref={element} value={value?.toString() ?? ""} initialValue={initialValue?.toString() ?? ""} {...otherProps}>
       {children}
     </jb-national-input>
   );
