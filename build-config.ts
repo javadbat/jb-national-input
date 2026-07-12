@@ -22,11 +22,11 @@ export const reactComponentList: ReactComponentBuildConfig[] = [
     name: "jb-national-input-react",
     path: "./react/lib/JBNationalInput.tsx",
     outputPath: "./react/dist/JBNationalInput.js",
-    external: ["jb-national-input", "jb-input-react", "jb-input", "prop-types", "react"],
+    external: ["jb-national-input", "jb-input/react", "jb-input", "prop-types", "react"],
     globals: {
       "react": "React",
       "jb-input": "JBInput",
-      "jb-input-react": "JBInputReact",
+      "jb-input/react": "JBInputReact",
       "jb-national-input": "JBNationalInput"
     },
     umdName: "JBNationalInputReact",

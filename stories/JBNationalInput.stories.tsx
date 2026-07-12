@@ -1,5 +1,5 @@
 import { JBNationalInput } from 'jb-national-input/react';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, userEvent, waitFor } from 'storybook/test';
 import { getMessageText, getNationalInput, getNativeInput } from './test-utils';
 
