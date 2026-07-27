@@ -1,3 +1,5 @@
+import { useRef } from 'react';
+import { JBButton } from 'jb-button/react';
 import { JBNationalInput } from 'jb-national-input/react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, userEvent, waitFor } from 'storybook/test';
@@ -51,4 +53,73 @@ export const Normal: Story = {
       expect(nationalInput.hasState('invalid')).toBe(false);
     });
   }
+};
+
+export const InitialValue: Story = {
+  render: (args) => {
+    const formRef = useRef<HTMLFormElement>(null);
+    return (
+      <form ref={formRef}>
+        <JBNationalInput {...args} />
+        <JBButton type="button" onClick={() => formRef.current?.reset()}>Reset</JBButton>
+      </form>
+    );
+  },
+  args: {
+    label: 'initial national id',
+    initialValue: '۰۰۱۲۳۴۵۶۷۹',
+  },
+  play: async ({ canvasElement }) => {
+    const nationalInput = getNationalInput(canvasElement);
+    const resetButton = canvasElement.querySelector('jb-button')?.shadowRoot?.querySelector<HTMLButtonElement>('button');
+
+    expect(resetButton).toBeTruthy();
+
+    await waitFor(() => {
+      // Persian input is canonicalized once and used consistently as baseline.
+      expect(nationalInput.initialValue).toBe('0012345679');
+      expect(nationalInput.value).toBe('0012345679');
+      expect(nationalInput.isDirty).toBe(false);
+    });
+
+    nationalInput.value = '0013545679';
+    await userEvent.click(resetButton!);
+
+    await waitFor(() => {
+      expect(nationalInput.value).toBe('0012345679');
+      expect(nationalInput.isDirty).toBe(false);
+    });
+  },
+};
+
+export const InitialValueDoesNotOverrideValue: Story = {
+  args: {
+    initialValue: '۰۰۱۲۳۴۵۶۷۹',
+    value: '0013545679',
+  },
+  play: async ({ canvasElement }) => {
+    const nationalInput = getNationalInput(canvasElement);
+
+    await waitFor(() => {
+      expect(nationalInput.initialValue).toBe('0012345679');
+      expect(nationalInput.value).toBe('0013545679');
+      expect(nationalInput.isDirty).toBe(true);
+    });
+  },
+};
+
+export const ExplicitNullValueDoesNotFallBackToInitialValue: Story = {
+  args: {
+    initialValue: '۰۰۱۲۳۴۵۶۷۹',
+    value: null,
+  },
+  play: async ({ canvasElement }) => {
+    const nationalInput = getNationalInput(canvasElement);
+
+    await waitFor(() => {
+      expect(nationalInput.initialValue).toBe('0012345679');
+      expect(nationalInput.value).toBe('');
+      expect(nationalInput.isDirty).toBe(true);
+    });
+  },
 };

@@ -18,8 +18,9 @@ const JBNationalInput = React.forwardRef((props: Props, ref) => {
   const {disabled,initialValue,required,validationList,value,children,onBeforeinput,onBlur,onChange,onEnter,onFocus,onInput,onKeydown,onKeyup , ...otherProps} = props;
   useJBInputAttribute<JBNationalInputWebComponent>(element, {disabled,required,validationList,...otherProps});
   useJBInputEvents<JBNationalInputWebComponent>(element, {onBeforeinput,onBlur,onChange,onEnter,onFocus,onInput,onKeydown,onKeyup,...otherProps});
+  const valueProps = value === undefined ? {} : { value: value?.toString() ?? "" };
   return (
-    <jb-national-input ref={element} value={value?.toString() ?? ""} initialValue={initialValue?.toString() ?? ""} {...otherProps}>
+    <jb-national-input ref={element} initialValue={initialValue?.toString() ?? ""} {...valueProps} {...otherProps}>
       {children}
     </jb-national-input>
   );
