@@ -74,3 +74,9 @@ export class JBNationalInputWebComponent extends JBInputWebComponent{
 }
 
 defineWebComponent("jb-national-input", JBNationalInputWebComponent);
+
+declare global {
+  interface HTMLElementTagNameMap {
+    "jb-national-input": JBNationalInputWebComponent;
+  }
+}
