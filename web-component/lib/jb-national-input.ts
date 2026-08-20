@@ -1,10 +1,10 @@
+import { defineWebComponent, faToEnDigits } from "jb-core";
 import CSS from "./jb-national-input.css";
 import VariablesCSS from "./variables.css";
 import "jb-input";
 // eslint-disable-next-line no-duplicate-imports
 import { JBInputWebComponent,type JBInputValue} from "jb-input";
 import type { ValidationItem } from "jb-validation";
-import { faToEnDigits } from "jb-core";
 import { dictionary } from "./i18n";
 import { i18n } from "jb-core/i18n";
 export * from "./types";
@@ -73,7 +73,4 @@ export class JBNationalInputWebComponent extends JBInputWebComponent{
   }
 }
 
-const myElementNotExists = !customElements.get("jb-national-input");
-if (myElementNotExists) {
-  window.customElements.define("jb-national-input", JBNationalInputWebComponent);
-}
+defineWebComponent("jb-national-input", JBNationalInputWebComponent);
